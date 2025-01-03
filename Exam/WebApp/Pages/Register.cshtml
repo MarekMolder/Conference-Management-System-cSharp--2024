@@ -23,8 +23,9 @@
 
     @if (Model.Sessions.Any())
     {
-        <table>
-            <thead>
+        <div class="table-container">
+            <table>
+                <thead>
                 <tr>
                     <th>Name</th>
                     <th>Location</th>
@@ -36,8 +37,8 @@
                     <th>Speakers (Current / Max)</th>
                     <th>Actions</th>
                 </tr>
-            </thead>
-            <tbody>
+                </thead>
+                <tbody>
                 @foreach (var session in Model.Sessions)
                 {
                     var attendeeCount = session.SessionParticipants.Count(sp => !sp.IsSpeaker);
@@ -81,8 +82,9 @@
                         </td>
                     </tr>
                 }
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
     }
     else
     {

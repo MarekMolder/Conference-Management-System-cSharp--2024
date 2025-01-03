@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f4f4f9;
+    background-color: #f5f5f7; /* Neutral light background */
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,7 +19,7 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: #4b4e6d; /* Deep desaturated blue */
     text-align: center;
     margin-bottom: 20px;
     font-size: 2em;
@@ -35,13 +35,13 @@ h1 {
 }
 
 .alert-success {
-    background-color: #d4edda;
-    color: #155724;
+    background-color: #e9f2f9; /* Soft light blue */
+    color: #3c6e8f; /* Muted blue */
 }
 
 .alert-danger {
-    background-color: #f8d7da;
-    color: #721c24;
+    background-color: #f9e4e6; /* Light red */
+    color: #8b3a42; /* Soft red */
 }
 
 /* Vormide stiilid */
@@ -54,7 +54,7 @@ form {
 input[type="text"] {
     padding: 10px;
     width: 60%;
-    border: 1px solid #ccc;
+    border: 1px solid #b0b2c3; /* Neutral border */
     border-radius: 5px;
     font-size: 1rem;
     margin-right: 10px;
@@ -63,7 +63,7 @@ input[type="text"] {
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #7177a8; /* Soft muted purple */
     border: none;
     border-radius: 5px;
     color: white;
@@ -73,84 +73,95 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #5a5f87; /* Slightly darker purple */
 }
 
 /* Tabeli stiilid */
+.table-container {
+    max-height: 400px; /* Määrab keritava ala kõrguse */
+    overflow-y: auto; /* Lisab vertikaalse kerimise vajadusel */
+    margin-top: 20px; /* Tühik tabeli kohal */
+    border: 1px solid #ccc; /* Piirjoon konteinerile */
+    border-radius: 5px; /* Ümarad servad */
+    background-color: #ffffff; /* Valge taust, et eristada taustast */
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 th, td {
     padding: 12px;
-    text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: #007bff;
+    background-color: #7177a8; /* Pehme lilla */
     color: white;
-    font-weight: bold;
 }
 
 tr:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Hover-efekt */
 }
 
 /* Nuppude stiilid */
-.btn-primary {
-    background-color: #28a745;
+button,
+a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
     border: none;
     border-radius: 5px;
-    color: white;
-    padding: 10px 20px;
     text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    color: white;
+    transition: transform 0.2s, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Roheline nupp */
+.btn-success {
+    background-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Sinine nupp */
+.btn-primary {
+    background-color: #007bff;
 }
 
 .btn-primary:hover {
-    background-color: #218838;
-}
-
-/* Üksikud sõnumid, kui konverentse pole */
-.no-conferences {
-    text-align: center;
-    font-size: 1.2em;
-    color: #6c757d;
-}
-
-/* Vormide labelid */
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: inline-block;
-}
-
-.input-field {
-    width: 100%;
-    height: 45px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 15px;
-}
-
-.input-submit {
-    padding: 10px 20px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.input-submit:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Punane nupp */
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Vertikaalne või horisontaalne paigutus */
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Lisa neutraalid toonid */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #d1d3db; /* Light gray */
+    margin: 20px 0;
 }

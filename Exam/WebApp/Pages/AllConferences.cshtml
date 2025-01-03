@@ -33,35 +33,37 @@ ViewData["Title"] = "Home page";
 
     @if (Model.Conferences.Any())
     {
-    <table>
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Location</th>
-            <th>Start Time</th>
-            <th>End Time</th>
-            <th>Topic</th>
-            <th>Description</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var conference in Model.Conferences)
-        {
-        <tr>
-            <td>@conference.Name</td>
-            <td>@conference.Location</td>
-            <td>@conference.StartTime.ToString("g")</td>
-            <td>@conference.EndTime.ToString("g")</td>
-            <td>@conference.Topic</td>
-            <td>@conference.Description</td>
-            <td>
-                <a asp-page="/Register" asp-route-conferenceId="@conference.Id" asp-route-userName="@ViewData["userName"]" class="btn btn-primary">Register</a>
-            </td>
-        </tr>
-        }
-        </tbody>
-    </table>
+        <div class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Topic</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var conference in Model.Conferences)
+                {
+                    <tr>
+                        <td>@conference.Name</td>
+                        <td>@conference.Location</td>
+                        <td>@conference.StartTime.ToString("g")</td>
+                        <td>@conference.EndTime.ToString("g")</td>
+                        <td>@conference.Topic</td>
+                        <td>@conference.Description</td>
+                        <td>
+                            <a asp-page="/Register" asp-route-conferenceId="@conference.Id" asp-route-userName="@ViewData["userName"]" class="btn btn-primary">Register</a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
     }
     else
     {

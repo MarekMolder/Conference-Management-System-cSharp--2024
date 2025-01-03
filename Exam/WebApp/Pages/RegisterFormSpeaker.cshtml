@@ -8,7 +8,7 @@ ViewData["Title"] = "Register as Speaker";
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/ss.css">
+    <link rel="stylesheet" href="css/form.css">
 </head>
 
 <div class="container">
@@ -16,12 +16,12 @@ ViewData["Title"] = "Register as Speaker";
 
     @if (TempData["SuccessMessage"] != null)
     {
-    <div class="alert">
+    <div class="alert alert-success">
         @TempData["SuccessMessage"]
     </div>
     }
 
-    <form method="post">
+    <form method="post" class="register-form">
         <div class="form-group">
             <label for="FirstName">First Name</label>
             <input type="text" id="FirstName" name="Participant.FirstName" required />

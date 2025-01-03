@@ -1,10 +1,50 @@
 ﻿@page
-@model IndexModel
+@model WebApp.Pages.Index
+
 @{
     ViewData["Title"] = "Home page";
 }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Conferences</h1>
 </div>
+
+@if (!string.IsNullOrWhiteSpace(Model.Error))
+{
+    <div class="alert alert-danger" role="alert">
+        @Model.Error
+    </div>
+}
+
+<div class="wrapper">
+    <div class="login_box">
+        <div class="login-header">
+            <span>Login</span>
+        </div>
+        
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="input_box">
+                <input asp-for="UserNamer" id="user" class="input-field"/>
+                <label asp-for="UserNamer" class="label">Gmail</label>
+                <span asp-validation-for="UserNamer" class="text-danger"></span>
+            </div>
+
+            <div class="input_box">
+                <input type="submit" value="Create" class="input-submit" />
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

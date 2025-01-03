@@ -1,18 +1,31 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebApp.Pages;
 
-public class IndexModel : PageModel
+public class Index : PageModel
 {
-    private readonly ILogger<IndexModel> _logger;
-
-    public IndexModel(ILogger<IndexModel> logger)
-    {
-        _logger = logger;
-    }
+    [BindProperty(SupportsGet = true)]
+    public string? Error { get; set; }
+    
+    [BindProperty]
+    public string? UserNamer { get; set; }
 
     public void OnGet()
     {
+    }
+    
+    public IActionResult OnPost()
+    {
+        UserNamer = UserNamer?.Trim();
+
+        if (!string.IsNullOrWhiteSpace(UserNamer))
+        {
+            return RedirectToPage("/AllConferences", new { userName = UserNamer });
+        }
+
+        Error = "Please enter a Gmail";
+
+        return Page();
     }
 }

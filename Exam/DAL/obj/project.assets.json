@@ -1088,6 +1088,16 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
       }
     }
   },
@@ -3104,10 +3114,16 @@
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.0",
@@ -3138,7 +3154,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "M:\\TalTech_dev\\CSharp2024\\cexam2025\\Exam\\Domain\\Domain.csproj": {
+              "projectPath": "M:\\TalTech_dev\\CSharp2024\\cexam2025\\Exam\\Domain\\Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

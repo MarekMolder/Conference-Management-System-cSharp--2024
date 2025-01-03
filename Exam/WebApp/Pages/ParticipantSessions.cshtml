@@ -1,0 +1,70 @@
+﻿@page
+@model WebApp.Pages.ParticipantSessions
+
+@{
+    ViewData["Title"] = "Your Sessions";
+}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ss.css">
+</head>
+
+<div class="container">
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <h1>Your Sessions</h1>
+
+    <p>Below are the sessions you are registered for:</p>
+
+    @if (Model.SessionParticipants.Any())
+    {
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Session Name</th>
+                <th>Location</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Topic</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var sp in Model.SessionParticipants)
+            {
+                <tr>
+                    <td>@sp.Session!.Name</td>
+                    <td>@sp.Session.Location</td>
+                    <td>@sp.Session.StartTime.ToString("g")</td>
+                    <td>@sp.Session.EndTime.ToString("g")</td>
+                    <td>@sp.Session.Topic</td>
+                    <td>
+                        <form method="post" asp-page="/ParticipantSessions" asp-route-userName="@Model.UserName">
+                            <input type="hidden" name="sessionParticipantId" value="@sp.Id" />
+                            <button type="submit" class="btn btn-danger">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p class="no-sessions">You are not registered for any sessions.</p>
+    }
+</div>

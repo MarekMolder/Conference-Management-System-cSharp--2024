@@ -28,6 +28,30 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/AllConferences.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxsQ29uZmVyZW5jZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Conferences/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZmVyZW5jZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Conferences/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZmVyZW5jZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Conferences/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZmVyZW5jZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Conferences/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZmVyZW5jZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Conferences/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZmVyZW5jZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,8 +60,84 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/ParticipantSessions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFydGljaXBhbnRTZXNzaW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Participants/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFydGljaXBhbnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Participants/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFydGljaXBhbnRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Participants/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFydGljaXBhbnRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Participants/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFydGljaXBhbnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Participants/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFydGljaXBhbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/RegisterFormAttendee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXJGb3JtQXR0ZW5kZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/RegisterFormSpeaker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXJGb3JtU3BlYWtlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/SessionParticipants/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvblBhcnRpY2lwYW50c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/SessionParticipants/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvblBhcnRpY2lwYW50c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/SessionParticipants/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvblBhcnRpY2lwYW50c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/SessionParticipants/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvblBhcnRpY2lwYW50c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/SessionParticipants/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvblBhcnRpY2lwYW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Sessions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Sessions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Sessions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Sessions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Sessions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvbnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [M:/TalTech_dev/CSharp2024/cexam2025/Exam/WebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]

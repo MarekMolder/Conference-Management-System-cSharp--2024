@@ -1,0 +1,70 @@
+﻿@page
+@model WebApp.Pages.AllConferencesModel
+@{
+ViewData["Title"] = "Home page";
+}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ss.css">
+</head>
+
+<div class="container">
+    @if (TempData["SuccessMessage"] != null)
+    {
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+    }
+
+    <h1>Search Conferences by Name, Location, Description, or Topic</h1>
+
+    <form method="post">
+        <input type="text" name="Search" value="@Model.Search" placeholder="Search by name, location, description, or topic" />
+        <button type="submit">SEARCH</button>
+    </form>
+
+    @if (Model.Conferences.Any())
+    {
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Topic</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var conference in Model.Conferences)
+        {
+        <tr>
+            <td>@conference.Name</td>
+            <td>@conference.Location</td>
+            <td>@conference.StartTime.ToString("g")</td>
+            <td>@conference.EndTime.ToString("g")</td>
+            <td>@conference.Topic</td>
+            <td>@conference.Description</td>
+            <td>
+                <a asp-page="/Register" asp-route-conferenceId="@conference.Id" asp-route-userName="@ViewData["userName"]" class="btn btn-primary">Register</a>
+            </td>
+        </tr>
+        }
+        </tbody>
+    </table>
+    }
+    else
+    {
+    <p class="no-conferences">No conferences found.</p>
+    }
+</div>

@@ -1,13 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace DAL;
 
 public class AppDbContext : DbContext
 {
-    // public DbSet<Booking> Bookings { get; set; }
-    // public DbSet<Client> Clients { get; set; }
-    // public DbSet<Table> Tables { get; set; }
-    // public DbSet<Restaurant> Restaurants { get; set; }
+    public DbSet<Conference> Conferences { get; set; }
+    public DbSet<Participant> Participants { get; set; }
+    public DbSet<Session> Sessions { get; set; }
+    public DbSet<SessionParticipant> SessionParticipants { get; set; }
       
     public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)

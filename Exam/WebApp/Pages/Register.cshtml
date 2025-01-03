@@ -1,0 +1,91 @@
+﻿@page
+@model WebApp.Pages.Register
+
+@{
+    ViewData["Title"] = "Register for Sessions";
+}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ss.css">
+</head>
+
+<div class="container">
+    <h1>Search Session by Name, Location, Description or Topic</h1>
+
+    <div>
+        <form method="post">
+            <input type="text" name="Search" value="@Model.Search" placeholder="Search sessions by name, location, topic, or description" />
+            <button type="submit">SEARCH</button>
+        </form>
+    </div>
+
+    @if (Model.Sessions.Any())
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Topic</th>
+                    <th>Description</th>
+                    <th>Attendees (Current / Max)</th>
+                    <th>Speakers (Current / Max)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var session in Model.Sessions)
+                {
+                    var attendeeCount = session.SessionParticipants.Count(sp => !sp.IsSpeaker);
+                    var speakerCount = session.SessionParticipants.Count(sp => sp.IsSpeaker);
+                    
+                    <tr>
+                        <td>@session.Name</td>
+                        <td>@session.Location</td>
+                        <td>@session.StartTime.ToString("g")</td>
+                        <td>@session.EndTime.ToString("g")</td>
+                        <td>@session.Topic</td>
+                        <td>@session.Description</td>
+                        <td>@attendeeCount / @session.AttendeeCapacity</td>
+                        <td>@speakerCount / @session.SpeakerCapacity</td>
+                        <td>
+                            @if (attendeeCount < session.AttendeeCapacity)
+                            {
+                                <a asp-page="/RegisterFormAttendee" 
+                                   asp-route-sessionId="@session.Id"
+                                   asp-route-userName="@ViewData["userName"]"
+                                   asp-route-type="attendee" 
+                                   class="btn btn-success">Register as Attendee</a>
+                            }
+                            else
+                            {
+                                <button class="btn btn-danger" disabled>Can't Register (Attendee Full)</button>
+                            }
+
+                            @if (speakerCount < session.SpeakerCapacity)
+                            {
+                                <a asp-page="/RegisterFormSpeaker" 
+                                   asp-route-sessionId="@session.Id"
+                                   asp-route-userName="@ViewData["userName"]"
+                                   asp-route-type="speaker" 
+                                   class="btn btn-primary">Register as Speaker</a>
+                            }
+                            else
+                            {
+                                <button class="btn btn-danger" disabled>Can't Register (Speaker Full)</button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p class="no-sessions">No sessions found.</p>
+    }
+</div>

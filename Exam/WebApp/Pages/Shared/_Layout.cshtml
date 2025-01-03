@@ -20,12 +20,42 @@
             </button>
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
+
+                    @{
+                    var userName = ViewData["userName"] as string; // Korrigeeri kasutajanime määramine
+                    }
+
+                    @if (userName == "admin")
+                    {
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Privacy" asp-route-userName="@userName">Privacy</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Conferences/Index" asp-route-userName="@userName">Conferences</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Participants/Index" asp-route-userName="@userName">Participants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/SessionParticipants/Index" asp-route-userName="@userName">SessionParticipants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Sessions/Index" asp-route-userName="@userName">Sessions</a>
+                    </li>
+                    }
+
+                    @if (!string.IsNullOrWhiteSpace(ViewData["UserName"] as string))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/AllConferences" asp-route-userName="@userName" >Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/ParticipantSessions" asp-route-userName="@userName" >MySessions</a>
+                        </li>
+                    }
+                   
+                    
                 </ul>
             </div>
         </div>

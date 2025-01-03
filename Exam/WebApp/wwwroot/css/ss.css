@@ -106,7 +106,7 @@ tr:hover {
     background-color: #f1f1f1; /* Hover-efekt */
 }
 
-/* Nuppude stiilid */
+/* Üldine nuppude stiil */
 button,
 a.btn {
     display: inline-block;
@@ -114,42 +114,51 @@ a.btn {
     margin: 5px;
     font-size: 1em;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
     color: white;
+    font-weight: bold;
     transition: transform 0.2s, background-color 0.3s ease;
     cursor: pointer;
 }
 
-/* Roheline nupp */
+/* Pastelne roheline (Success) */
 .btn-success {
-    background-color: #28a745;
+    background-color: darkseagreen; /* Pastelne roheline */
 }
 
 .btn-success:hover {
-    background-color: #218838;
+    background-color: mediumseagreen;
     transform: scale(1.05);
 }
 
-/* Sinine nupp */
+/* Pastelne sinine (Primary) */
 .btn-primary {
-    background-color: #007bff;
+    background-color: cornflowerblue; /* Pastelne sinine */
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: deepskyblue;
     transform: scale(1.05);
 }
 
-/* Punane nupp */
+/* Pastelne punane (Danger) */
 .btn-danger {
-    background-color: #dc3545;
+    background-color: indianred; /* Pastelne punane */
 }
 
 .btn-danger:hover {
-    background-color: #c82333;
+    background-color: lightcoral;
     transform: scale(1.05);
 }
+
+/* Vertikaalne või horisontaalne paigutus */
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 
 /* Vertikaalne või horisontaalne paigutus */
 .button-group {

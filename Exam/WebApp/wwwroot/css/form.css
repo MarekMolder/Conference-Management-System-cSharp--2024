@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -7,30 +8,27 @@
 
 body {
     background-color: #f5f5f7; /* Neutral light background */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Korrastatud konteiner */
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 30px;
+    width: 100%;
+    max-width: 400px; /* Maksimaalne laius */
+    margin: 20px auto;
+    padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
-/* Pealkiri */
 h1 {
-    color: #4b4e6d; /* Deep desaturated blue */
+    color: #4b4e6d;
     text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 30px;
+    font-size: 1.8em; /* Väiksem font */
+    margin-bottom: 20px;
 }
 
-/* Vormide stiilid */
 .register-form {
     display: flex;
     flex-direction: column;
@@ -41,52 +39,30 @@ h1 {
 }
 
 label {
-    font-size: 1.2em;
+    font-size: 1em;
     margin-bottom: 5px;
-    color: #555;
+    color: #333;
 }
 
-input[type="text"],
-input[type="email"] {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #b0b2c3; /* Neutral border */
-    border-radius: 5px;
+input {
     width: 100%;
-    margin-top: 5px;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
-    padding: 12px;
-    background-color: #7177a8; /* Soft muted purple */
-    color: white;
+    padding: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #5a5f87; /* Slightly darker purple */
-}
-
-/* Alertide stiilid */
-.alert {
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.alert-success {
-    background-color: #e9f2f9; /* Soft light blue */
-    color: #3c6e8f; /* Muted blue */
-}
-
-.alert-danger {
-    background-color: #f9e4e6; /* Light red */
-    color: #8b3a42; /* Soft red */
+    background-color: #0056b3;
 }
